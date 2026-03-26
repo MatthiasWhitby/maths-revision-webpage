@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Questions</title>
+        <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+        <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&display=swap" rel="stylesheet">
+    </head>
+
+    <body>
+        <div class="container">
+        <p>{{ question|safe }}</p>
+        <form action="/result" method="POST">
+            {% for option in options %}
+                <button name="chosen" value="{{ option|safe }}">{{ option|safe }}</button>
+            {% endfor %}
+        </form>
+        
+        <form action="/" method="GET">
+            <button>Return to Menu</button>
+        </form>
+        </div>
+    </body>
+</html>

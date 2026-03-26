@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Maths Quiz</title>
+        <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+        <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&display=swap" rel="stylesheet">
+    </head>
+
+    <body>
+        <div class="container">
+        <h1>Maths Quiz</h1>
+        <p>Welcome to the A-Level Maths Revision site. Please select a topic to continue to the questions.</p>
+        <form action="/quiz" method="POST">
+            <button name="topic" value="1">Differentiation</button>
+            <button name="topic" value="2">Integration</button>
+            <button name="topic" value="3">Sequences</button>
+        </form>
+        </div>
+    </body>
+</html>
